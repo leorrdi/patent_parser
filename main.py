@@ -1,2 +1,2 @@
 print("Hello worldd!")
-print("asdasd")
+print("еуфыв")
