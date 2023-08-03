@@ -111,6 +111,3 @@ def parameterSetting(driver, name, dateStatus='', date='', author='', assign='',
         litigation_dropdown[0].click()
     elif litigation == 'Не имеет судебные разбирательства':
         litigation_dropdown[1].click()
-
-
-parseGoogle(60, 'engine')
