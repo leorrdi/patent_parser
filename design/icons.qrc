@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>../f7b17b9b/sliders.svg</file>
+    <file>../6b30a884/settings.svg</file>
+    <file>../501cb804/search.svg</file>
+    <file>../5ee5da0b/database.svg</file>
+    <file>../cc29539d/chrome.svg</file>
+    <file>../c15a4651/align-justify.svg</file>
+    <file>../e77432b9/arrow-down-left.svg</file>
+    <file>../d5f65c3a/arrow-left.svg</file>
+    <file>../45d1cc4/maximize-2.svg</file>
+    <file>../72623cdb/x.svg</file>
+  </qresource>
+</RCC>
