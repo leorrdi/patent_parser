@@ -150,8 +150,9 @@ class Ui_MainWindow(object):
         self.exit_button = QPushButton(self.frame_5)
         self.exit_button.setObjectName(u"exit_button")
         font1 = QFont()
-        font1.setPointSize(13)
+        font1.setPointSize(9)
         self.exit_button.setFont(font1)
+        self.exit_button.setLayoutDirection(Qt.LeftToRight)
         icon3 = QIcon()
         icon3.addFile(u":/icons/log-out (1).svg", QSize(), QIcon.Normal, QIcon.Off)
         self.exit_button.setIcon(icon3)
@@ -210,47 +211,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_2.addWidget(self.frame_2, 0, Qt.AlignLeft|Qt.AlignTop)
 
-        self.frame = QFrame(self.header_frame)
-        self.frame.setObjectName(u"frame")
-        self.frame.setFrameShape(QFrame.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_3 = QHBoxLayout(self.frame)
-        self.horizontalLayout_3.setSpacing(0)
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.minimize_window_button = QPushButton(self.frame)
-        self.minimize_window_button.setObjectName(u"minimize_window_button")
-        sizePolicy1.setHeightForWidth(self.minimize_window_button.sizePolicy().hasHeightForWidth())
-        self.minimize_window_button.setSizePolicy(sizePolicy1)
-        icon5 = QIcon()
-        icon5.addFile(u":/icons/arrow-down-left.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.minimize_window_button.setIcon(icon5)
-
-        self.horizontalLayout_3.addWidget(self.minimize_window_button)
-
-        self.restore_window_button = QPushButton(self.frame)
-        self.restore_window_button.setObjectName(u"restore_window_button")
-        sizePolicy1.setHeightForWidth(self.restore_window_button.sizePolicy().hasHeightForWidth())
-        self.restore_window_button.setSizePolicy(sizePolicy1)
-        icon6 = QIcon()
-        icon6.addFile(u":/icons/maximize-2.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.restore_window_button.setIcon(icon6)
-
-        self.horizontalLayout_3.addWidget(self.restore_window_button)
-
-        self.close_window_button = QPushButton(self.frame)
-        self.close_window_button.setObjectName(u"close_window_button")
-        sizePolicy1.setHeightForWidth(self.close_window_button.sizePolicy().hasHeightForWidth())
-        self.close_window_button.setSizePolicy(sizePolicy1)
-        icon7 = QIcon()
-        icon7.addFile(u":/icons/x.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.close_window_button.setIcon(icon7)
-
-        self.horizontalLayout_3.addWidget(self.close_window_button)
-
-
-        self.horizontalLayout_2.addWidget(self.frame, 0, Qt.AlignRight|Qt.AlignTop)
-
 
         self.verticalLayout.addWidget(self.header_frame, 0, Qt.AlignTop)
 
@@ -283,8 +243,5 @@ class Ui_MainWindow(object):
         self.settings_widget_button.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
         self.exit_button.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0445\u043e\u0434", None))
         self.menu_button.setText("")
-        self.minimize_window_button.setText("")
-        self.restore_window_button.setText("")
-        self.close_window_button.setText("")
     # retranslateUi
 
