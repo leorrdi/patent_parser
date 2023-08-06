@@ -1,8 +1,8 @@
 import sys
 import os
 from PySide2 import *
-from design.ui_main_interface import *
-
+from design.main_interface import *
+from design.patentSearch_interface import Ui_Form
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -21,6 +21,8 @@ class MainWindow(QMainWindow):
 
         self.ui.exit_button.clicked.connect(lambda: self.close())
         self.ui.menu_button.clicked.connect(lambda: self.slideLeftMenu())
+    
+        self.ui.database_widget_button.connect(lambda: self.ui.stackedWidget.setCurrentWidget(Ui_Form))
 
         self.show()
     
