@@ -1,14 +1,19 @@
 <RCC>
   <qresource prefix="icons">
-    <file>minimize-2.svg</file>
-    <file>settings.svg</file>
     <file>x.svg</file>
+    <file>wifi-off.svg</file>
+    <file>square.svg</file>
     <file>sliders.svg</file>
+    <file>settings.svg</file>
     <file>search.svg</file>
+    <file>save.svg</file>
+    <file>minimize-2.svg</file>
     <file>maximize-2.svg</file>
     <file>log-out (1).svg</file>
+    <file>file-text.svg</file>
     <file>database.svg</file>
     <file>chrome.svg</file>
+    <file>check-square.svg</file>
     <file>arrow-left.svg</file>
     <file>arrow-down-left.svg</file>
     <file>align-justify.svg</file>

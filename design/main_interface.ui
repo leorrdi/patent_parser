@@ -157,7 +157,7 @@
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="../7fb5d5eb/icons.qrc">:/icons/chrome.svg</pixmap>
+                <pixmap>:/icons/chrome.svg</pixmap>
                </property>
               </widget>
              </item>
@@ -245,7 +245,7 @@
                    <string>Поисковик</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="../7fb5d5eb/icons.qrc">
+                   <iconset>
                     <normaloff>:/icons/search.svg</normaloff>:/icons/search.svg</iconset>
                   </property>
                  </widget>
@@ -262,7 +262,7 @@
                    <string>База данных</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="../7fb5d5eb/icons.qrc">
+                   <iconset>
                     <normaloff>:/icons/database.svg</normaloff>:/icons/database.svg</iconset>
                   </property>
                  </widget>
@@ -279,7 +279,7 @@
                    <string>Настройки</string>
                   </property>
                   <property name="icon">
-                   <iconset resource="../7fb5d5eb/icons.qrc">
+                   <iconset>
                     <normaloff>:/icons/settings.svg</normaloff>:/icons/settings.svg</iconset>
                   </property>
                  </widget>
@@ -328,7 +328,7 @@
                 <string>Выход</string>
                </property>
                <property name="icon">
-                <iconset resource="../7fb5d5eb/icons.qrc">
+                <iconset>
                  <normaloff>:/icons/log-out (1).svg</normaloff>:/icons/log-out (1).svg</iconset>
                </property>
                <property name="iconSize">
@@ -435,7 +435,7 @@
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="../7fb5d5eb/icons.qrc">
+                <iconset>
                  <normaloff>:/icons/align-justify.svg</normaloff>:/icons/align-justify.svg</iconset>
                </property>
                <property name="iconSize">
@@ -466,6 +466,14 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget">
+            <widget class="QWidget" name="searchPatent_page"/>
+            <widget class="QWidget" name="page_2"/>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>

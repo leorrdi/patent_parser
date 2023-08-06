@@ -220,6 +220,19 @@ class Ui_MainWindow(object):
         self.main_body_contents.setSizePolicy(sizePolicy)
         self.main_body_contents.setFrameShape(QFrame.StyledPanel)
         self.main_body_contents.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_6 = QVBoxLayout(self.main_body_contents)
+        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.stackedWidget = QStackedWidget(self.main_body_contents)
+        self.stackedWidget.setObjectName(u"stackedWidget")
+        self.searchPatent_page = QWidget()
+        self.searchPatent_page.setObjectName(u"searchPatent_page")
+        self.stackedWidget.addWidget(self.searchPatent_page)
+        self.page_2 = QWidget()
+        self.page_2.setObjectName(u"page_2")
+        self.stackedWidget.addWidget(self.page_2)
+
+        self.verticalLayout_6.addWidget(self.stackedWidget)
+
 
         self.verticalLayout.addWidget(self.main_body_contents)
 
