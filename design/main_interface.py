@@ -31,6 +31,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.slide_menu_container = QFrame(self.centralwidget)
         self.slide_menu_container.setObjectName(u"slide_menu_container")
+        self.slide_menu_container.setMinimumSize(QSize(0, 0))
         self.slide_menu_container.setMaximumSize(QSize(0, 16777215))
         self.slide_menu_container.setStyleSheet(u"background-color:rgb(9,5,13);")
         self.slide_menu_container.setFrameShape(QFrame.StyledPanel)
@@ -106,23 +107,23 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setSpacing(10)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.database_widget_button = QPushButton(self.frame_6)
-        self.database_widget_button.setObjectName(u"database_widget_button")
-        self.database_widget_button.setMinimumSize(QSize(0, 32))
-        icon = QIcon()
-        icon.addFile(u":/icons/search.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.database_widget_button.setIcon(icon)
-
-        self.verticalLayout_5.addWidget(self.database_widget_button)
-
         self.search_widget_button = QPushButton(self.frame_6)
         self.search_widget_button.setObjectName(u"search_widget_button")
         self.search_widget_button.setMinimumSize(QSize(0, 32))
-        icon1 = QIcon()
-        icon1.addFile(u":/icons/database.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.search_widget_button.setIcon(icon1)
+        icon = QIcon()
+        icon.addFile(u":/icons/search.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.search_widget_button.setIcon(icon)
 
         self.verticalLayout_5.addWidget(self.search_widget_button)
+
+        self.database_widget_button_2 = QPushButton(self.frame_6)
+        self.database_widget_button_2.setObjectName(u"database_widget_button_2")
+        self.database_widget_button_2.setMinimumSize(QSize(0, 32))
+        icon1 = QIcon()
+        icon1.addFile(u":/icons/database.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.database_widget_button_2.setIcon(icon1)
+
+        self.verticalLayout_5.addWidget(self.database_widget_button_2)
 
         self.settings_widget_button = QPushButton(self.frame_6)
         self.settings_widget_button.setObjectName(u"settings_widget_button")
@@ -227,9 +228,9 @@ class Ui_MainWindow(object):
         self.searchPatent_page = QWidget()
         self.searchPatent_page.setObjectName(u"searchPatent_page")
         self.stackedWidget.addWidget(self.searchPatent_page)
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.stackedWidget.addWidget(self.page_2)
+        self.database_page = QWidget()
+        self.database_page.setObjectName(u"database_page")
+        self.stackedWidget.addWidget(self.database_page)
 
         self.verticalLayout_6.addWidget(self.stackedWidget)
 
@@ -251,8 +252,8 @@ class Ui_MainWindow(object):
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0410\u0420\u0421\u0415\u0420\n"
 "\u041f\u0410\u0422\u0415\u041d\u0422\u041e\u0412", None))
         self.label_3.setText("")
-        self.database_widget_button.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0438\u0441\u043a\u043e\u0432\u0438\u043a", None))
-        self.search_widget_button.setText(QCoreApplication.translate("MainWindow", u"\u0411\u0430\u0437\u0430 \u0434\u0430\u043d\u043d\u044b\u0445", None))
+        self.search_widget_button.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0438\u0441\u043a\u043e\u0432\u0438\u043a", None))
+        self.database_widget_button_2.setText(QCoreApplication.translate("MainWindow", u"\u0411\u0430\u0437\u0430 \u0434\u0430\u043d\u043d\u044b\u0445", None))
         self.settings_widget_button.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
         self.exit_button.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0445\u043e\u0434", None))
         self.menu_button.setText("")

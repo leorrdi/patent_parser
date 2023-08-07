@@ -40,6 +40,12 @@
     </property>
     <item>
      <widget class="QFrame" name="slide_menu_container">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
         <width>0</width>
@@ -157,7 +163,7 @@
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap>:/icons/chrome.svg</pixmap>
+                <pixmap resource="../832c2ab8/icons.qrc">:/icons/chrome.svg</pixmap>
                </property>
               </widget>
              </item>
@@ -234,7 +240,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QPushButton" name="database_widget_button">
+                 <widget class="QPushButton" name="search_widget_button">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -245,13 +251,13 @@
                    <string>Поисковик</string>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="../832c2ab8/icons.qrc">
                     <normaloff>:/icons/search.svg</normaloff>:/icons/search.svg</iconset>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="search_widget_button">
+                 <widget class="QPushButton" name="database_widget_button_2">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -262,7 +268,7 @@
                    <string>База данных</string>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="../832c2ab8/icons.qrc">
                     <normaloff>:/icons/database.svg</normaloff>:/icons/database.svg</iconset>
                   </property>
                  </widget>
@@ -279,7 +285,7 @@
                    <string>Настройки</string>
                   </property>
                   <property name="icon">
-                   <iconset>
+                   <iconset resource="../832c2ab8/icons.qrc">
                     <normaloff>:/icons/settings.svg</normaloff>:/icons/settings.svg</iconset>
                   </property>
                  </widget>
@@ -328,7 +334,7 @@
                 <string>Выход</string>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="../832c2ab8/icons.qrc">
                  <normaloff>:/icons/log-out (1).svg</normaloff>:/icons/log-out (1).svg</iconset>
                </property>
                <property name="iconSize">
@@ -435,7 +441,7 @@
                 <string/>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="../832c2ab8/icons.qrc">
                  <normaloff>:/icons/align-justify.svg</normaloff>:/icons/align-justify.svg</iconset>
                </property>
                <property name="iconSize">
@@ -470,7 +476,7 @@
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <widget class="QWidget" name="searchPatent_page"/>
-            <widget class="QWidget" name="page_2"/>
+            <widget class="QWidget" name="database_page"/>
            </widget>
           </item>
          </layout>
@@ -483,7 +489,7 @@
   </widget>
  </widget>
  <resources>
-  <include location="../7fb5d5eb/icons.qrc"/>
+  <include location="../832c2ab8/icons.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -4,6 +4,35 @@ from PySide2 import *
 from design.main_interface import *
 from design.patentSearch_interface import Ui_Form
 
+
+class PatentSearch(QWidget):
+    def __init__(self):
+        QWidget.__init__(self)
+        self.ui = Ui_Form()
+        self.ui.setupUi(self)
+
+        self.ui.requestParameters_button.clicked.connect(lambda: self.slideLeftMenu())
+
+
+        self.show()
+    
+
+    def slideLeftMenu(self):
+        height = self.ui.slide_menu_container.height()
+
+        if height == 0:
+            newHeight = 200
+        else:
+            newHeight = 0
+
+        self.animation = QPropertyAnimation(self.ui.slide_menu_container, b"maximumHeight")
+        self.animation.setDuration(250)
+        self.animation.setStartValue(height)
+        self.animation.setEndValue(newHeight)
+        self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+        self.animation.start()
+
+
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -21,8 +50,10 @@ class MainWindow(QMainWindow):
 
         self.ui.exit_button.clicked.connect(lambda: self.close())
         self.ui.menu_button.clicked.connect(lambda: self.slideLeftMenu())
-    
-        self.ui.database_widget_button.connect(lambda: self.ui.stackedWidget.setCurrentWidget(Ui_Form))
+
+        
+        self.ui.stackedWidget.insertWidget(0, PatentSearch())
+        self.ui.search_widget_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
 
         self.show()
     
