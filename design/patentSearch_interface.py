@@ -26,9 +26,6 @@ class Ui_Form(object):
 "#parsingStart_button{\n"
 "	background-color:rgb(9,5,13);\n"
 "}\n"
-"#requestName_textEdit{\n"
-"	background-color:rgb(9,5,13);\n"
-"}\n"
 "#frame{\n"
 "	background-color:rgb(9,5,13);\n"
 "	border-radius: 10px;\n"
@@ -132,19 +129,19 @@ class Ui_Form(object):
         self.slide_menu_container.setObjectName(u"slide_menu_container")
         self.slide_menu_container.setMinimumSize(QSize(0, 0))
         self.slide_menu_container.setMaximumSize(QSize(16777215, 0))
-        self.slide_menu_container.setStyleSheet(u"#frame_4{\n"
-"	background-color:rgb(9,5,13);\n"
-"}\n"
-"#frame_5{\n"
-"	background-color:rgb(9,5,13);\n"
+        self.slide_menu_container.setStyleSheet(u"QFrame{\n"
+"	background-color:rgb(20,20,27);\n"
 "}\n"
 "QPushButton{\n"
 "	border-radius:5px;\n"
-"	background-color:rgb(24,24,36);\n"
+"	background-color:rgb(9,5,13);\n"
 "}\n"
 "QComboBox{\n"
 "	border-radius:5px;\n"
-"	background-color:rgb(24,24,36);\n"
+"	background-color:rgb(9,5,13);\n"
+"}\n"
+"QCheckBox{\n"
+"	background-color:rgb(20,20,27);\n"
 "}")
         self.slide_menu_container.setFrameShape(QFrame.StyledPanel)
         self.slide_menu_container.setFrameShadow(QFrame.Raised)
@@ -162,106 +159,154 @@ class Ui_Form(object):
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.frame_4 = QFrame(self.slide_menu)
         self.frame_4.setObjectName(u"frame_4")
-        sizePolicy = QSizePolicy(QSizePolicy.Maximum, QSizePolicy.Maximum)
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_4.sizePolicy().hasHeightForWidth())
         self.frame_4.setSizePolicy(sizePolicy)
-        self.frame_4.setMinimumSize(QSize(0, 0))
+        self.frame_4.setMinimumSize(QSize(0, 50))
         self.frame_4.setFrameShape(QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_4 = QVBoxLayout(self.frame_4)
-        self.verticalLayout_4.setSpacing(0)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame_4)
+        self.horizontalLayout_5.setSpacing(0)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.frame_9 = QFrame(self.frame_4)
+        self.frame_9.setObjectName(u"frame_9")
+        self.frame_9.setFrameShape(QFrame.StyledPanel)
+        self.frame_9.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_4 = QVBoxLayout(self.frame_9)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.verticalLayout_4.setContentsMargins(15, 5, 0, 5)
-        self.comboBox = QComboBox(self.frame_4)
+        self.checkBox_2 = QCheckBox(self.frame_9)
+        self.checkBox_2.setObjectName(u"checkBox_2")
+
+        self.verticalLayout_4.addWidget(self.checkBox_2, 0, Qt.AlignLeft)
+
+
+        self.horizontalLayout_5.addWidget(self.frame_9, 0, Qt.AlignLeft)
+
+        self.frame_10 = QFrame(self.frame_4)
+        self.frame_10.setObjectName(u"frame_10")
+        self.frame_10.setFrameShape(QFrame.StyledPanel)
+        self.frame_10.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_9 = QVBoxLayout(self.frame_10)
+        self.verticalLayout_9.setSpacing(0)
+        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+        self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
+        self.comboBox = QComboBox(self.frame_10)
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.setObjectName(u"comboBox")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.comboBox.sizePolicy().hasHeightForWidth())
-        self.comboBox.setSizePolicy(sizePolicy1)
         self.comboBox.setMinimumSize(QSize(150, 25))
 
-        self.verticalLayout_4.addWidget(self.comboBox, 0, Qt.AlignLeft)
+        self.verticalLayout_9.addWidget(self.comboBox)
 
 
-        self.verticalLayout_5.addWidget(self.frame_4, 0, Qt.AlignLeft)
+        self.horizontalLayout_5.addWidget(self.frame_10, 0, Qt.AlignRight)
 
-        self.stackedWidget = QStackedWidget(self.slide_menu)
-        self.stackedWidget.setObjectName(u"stackedWidget")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.stackedWidget.sizePolicy().hasHeightForWidth())
-        self.stackedWidget.setSizePolicy(sizePolicy2)
-        self.stackedWidget.setMinimumSize(QSize(0, 0))
-        self.stackedWidget.setMaximumSize(QSize(16777215, 16777215))
-        self.stackedWidget.setStyleSheet(u"QWidget{\n"
-"	background-color:rgb(9,5,13);\n"
-"}")
-        self.googlePatent_widget = QWidget()
-        self.googlePatent_widget.setObjectName(u"googlePatent_widget")
-        sizePolicy2.setHeightForWidth(self.googlePatent_widget.sizePolicy().hasHeightForWidth())
-        self.googlePatent_widget.setSizePolicy(sizePolicy2)
-        self.verticalLayout_8 = QVBoxLayout(self.googlePatent_widget)
-        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
-        self.frame_6 = QFrame(self.googlePatent_widget)
+
+        self.verticalLayout_5.addWidget(self.frame_4)
+
+        self.frame_6 = QFrame(self.slide_menu)
         self.frame_6.setObjectName(u"frame_6")
         self.frame_6.setFrameShape(QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_7 = QVBoxLayout(self.frame_6)
-        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
-        self.pushButton_3 = QPushButton(self.frame_6)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-
-        self.verticalLayout_7.addWidget(self.pushButton_3)
-
-        self.pushButton_4 = QPushButton(self.frame_6)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-
-        self.verticalLayout_7.addWidget(self.pushButton_4)
-
-
-        self.verticalLayout_8.addWidget(self.frame_6)
-
-        self.frame_7 = QFrame(self.googlePatent_widget)
+        self.frame_6.setLineWidth(1)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_6)
+        self.horizontalLayout_4.setSpacing(0)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.frame_7 = QFrame(self.frame_6)
         self.frame_7.setObjectName(u"frame_7")
+        self.frame_7.setMinimumSize(QSize(150, 0))
         self.frame_7.setFrameShape(QFrame.StyledPanel)
         self.frame_7.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_6 = QVBoxLayout(self.frame_7)
+        self.verticalLayout_7 = QVBoxLayout(self.frame_7)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.yandex_checkBox = QCheckBox(self.frame_7)
+        self.yandex_checkBox.setObjectName(u"yandex_checkBox")
+
+        self.verticalLayout_7.addWidget(self.yandex_checkBox)
+
+        self.google_checkBox = QCheckBox(self.frame_7)
+        self.google_checkBox.setObjectName(u"google_checkBox")
+
+        self.verticalLayout_7.addWidget(self.google_checkBox)
+
+        self.rospatent_checkBox = QCheckBox(self.frame_7)
+        self.rospatent_checkBox.setObjectName(u"rospatent_checkBox")
+
+        self.verticalLayout_7.addWidget(self.rospatent_checkBox)
+
+        self.fips_checkBox = QCheckBox(self.frame_7)
+        self.fips_checkBox.setObjectName(u"fips_checkBox")
+
+        self.verticalLayout_7.addWidget(self.fips_checkBox)
+
+        self.wipo_checkBox = QCheckBox(self.frame_7)
+        self.wipo_checkBox.setObjectName(u"wipo_checkBox")
+
+        self.verticalLayout_7.addWidget(self.wipo_checkBox)
+
+        self.checkBox_7 = QCheckBox(self.frame_7)
+        self.checkBox_7.setObjectName(u"checkBox_7")
+
+        self.verticalLayout_7.addWidget(self.checkBox_7)
+
+
+        self.horizontalLayout_4.addWidget(self.frame_7)
+
+        self.frame_8 = QFrame(self.frame_6)
+        self.frame_8.setObjectName(u"frame_8")
+        self.frame_8.setFrameShape(QFrame.StyledPanel)
+        self.frame_8.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_6 = QVBoxLayout(self.frame_8)
+        self.verticalLayout_6.setSpacing(0)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.pushButton_5 = QPushButton(self.frame_7)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-
-        self.verticalLayout_6.addWidget(self.pushButton_5)
-
-        self.pushButton_6 = QPushButton(self.frame_7)
-        self.pushButton_6.setObjectName(u"pushButton_6")
-
-        self.verticalLayout_6.addWidget(self.pushButton_6)
-
-
-        self.verticalLayout_8.addWidget(self.frame_7)
-
+        self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.stackedWidget = QStackedWidget(self.frame_8)
+        self.stackedWidget.setObjectName(u"stackedWidget")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.stackedWidget.sizePolicy().hasHeightForWidth())
+        self.stackedWidget.setSizePolicy(sizePolicy1)
+        self.stackedWidget.setMinimumSize(QSize(0, 0))
+        self.stackedWidget.setMaximumSize(QSize(16777215, 16777215))
+        self.stackedWidget.setStyleSheet(u"QWidget{\n"
+"	background-color:rgb(20,20,27);\n"
+"}")
+        self.googlePatent_widget = QWidget()
+        self.googlePatent_widget.setObjectName(u"googlePatent_widget")
+        sizePolicy1.setHeightForWidth(self.googlePatent_widget.sizePolicy().hasHeightForWidth())
+        self.googlePatent_widget.setSizePolicy(sizePolicy1)
+        self.verticalLayout_8 = QVBoxLayout(self.googlePatent_widget)
+        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.stackedWidget.addWidget(self.googlePatent_widget)
         self.rospatent_widget = QWidget()
         self.rospatent_widget.setObjectName(u"rospatent_widget")
-        sizePolicy2.setHeightForWidth(self.rospatent_widget.sizePolicy().hasHeightForWidth())
-        self.rospatent_widget.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.rospatent_widget.sizePolicy().hasHeightForWidth())
+        self.rospatent_widget.setSizePolicy(sizePolicy1)
         self.stackedWidget.addWidget(self.rospatent_widget)
 
-        self.verticalLayout_5.addWidget(self.stackedWidget)
+        self.verticalLayout_6.addWidget(self.stackedWidget)
+
+
+        self.horizontalLayout_4.addWidget(self.frame_8)
+
+
+        self.verticalLayout_5.addWidget(self.frame_6)
 
         self.frame_5 = QFrame(self.slide_menu)
         self.frame_5.setObjectName(u"frame_5")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.frame_5.sizePolicy().hasHeightForWidth())
-        self.frame_5.setSizePolicy(sizePolicy3)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.frame_5.sizePolicy().hasHeightForWidth())
+        self.frame_5.setSizePolicy(sizePolicy2)
         self.frame_5.setMinimumSize(QSize(0, 40))
         self.frame_5.setFrameShape(QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QFrame.Raised)
@@ -270,11 +315,11 @@ class Ui_Form(object):
         self.horizontalLayout_3.setContentsMargins(15, 5, 15, 10)
         self.pushButton = QPushButton(self.frame_5)
         self.pushButton.setObjectName(u"pushButton")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Expanding)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy4)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Expanding)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
+        self.pushButton.setSizePolicy(sizePolicy3)
         self.pushButton.setMinimumSize(QSize(0, 0))
         self.pushButton.setSizeIncrement(QSize(0, 0))
 
@@ -282,8 +327,8 @@ class Ui_Form(object):
 
         self.pushButton_2 = QPushButton(self.frame_5)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        sizePolicy4.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
-        self.pushButton_2.setSizePolicy(sizePolicy4)
+        sizePolicy3.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
+        self.pushButton_2.setSizePolicy(sizePolicy3)
 
         self.horizontalLayout_3.addWidget(self.pushButton_2)
 
@@ -298,8 +343,8 @@ class Ui_Form(object):
 
         self.listWidget = QListWidget(self.frame_3)
         self.listWidget.setObjectName(u"listWidget")
-        sizePolicy2.setHeightForWidth(self.listWidget.sizePolicy().hasHeightForWidth())
-        self.listWidget.setSizePolicy(sizePolicy2)
+        sizePolicy1.setHeightForWidth(self.listWidget.sizePolicy().hasHeightForWidth())
+        self.listWidget.setSizePolicy(sizePolicy1)
         self.listWidget.setMinimumSize(QSize(0, 0))
         self.listWidget.setMaximumSize(QSize(16777215, 16777215))
         font1 = QFont()
@@ -324,13 +369,19 @@ class Ui_Form(object):
         self.requestParameters_button.setText("")
         self.checkBox.setText(QCoreApplication.translate("Form", u"\u0412\u044b\u0434\u0435\u043b\u0438\u0442\u044c \u0432\u0441\u0435", None))
         self.savePatent_button.setText(QCoreApplication.translate("Form", u"\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c", None))
-        self.comboBox.setItemText(0, QCoreApplication.translate("Form", u"\u0420\u043e\u0441\u043f\u0430\u0442\u0435\u043d\u0442", None))
-        self.comboBox.setItemText(1, QCoreApplication.translate("Form", u"Google Patents", None))
+        self.checkBox_2.setText(QCoreApplication.translate("Form", u"\u0412\u044b\u0431\u0440\u0430\u0442\u044c \u0432\u0441\u0435 \u0438\u0441\u0442\u043e\u0447\u043d\u0438\u043a\u0438", None))
+        self.comboBox.setItemText(0, QCoreApplication.translate("Form", u"\u042f\u043d\u0434\u0435\u043a\u0441.\u041f\u0430\u0442\u0435\u043d\u0442\u044b", None))
+        self.comboBox.setItemText(1, QCoreApplication.translate("Form", u"\u0413\u0443\u0433\u043b \u043f\u0430\u0442\u0435\u043d\u0442\u044b", None))
+        self.comboBox.setItemText(2, QCoreApplication.translate("Form", u"\u0420\u043e\u0441\u043f\u0430\u0442\u0435\u043d\u0442", None))
+        self.comboBox.setItemText(3, QCoreApplication.translate("Form", u"\u0424\u0438\u043f\u0441", None))
+        self.comboBox.setItemText(4, QCoreApplication.translate("Form", u"\u0412\u0438\u043f\u043e", None))
 
-        self.pushButton_3.setText(QCoreApplication.translate("Form", u"PushButton", None))
-        self.pushButton_4.setText(QCoreApplication.translate("Form", u"PushButton", None))
-        self.pushButton_5.setText(QCoreApplication.translate("Form", u"PushButton", None))
-        self.pushButton_6.setText(QCoreApplication.translate("Form", u"PushButton", None))
+        self.yandex_checkBox.setText(QCoreApplication.translate("Form", u"\u042f\u043d\u0434\u0435\u043a\u0441.\u041f\u0430\u0442\u0435\u043d\u0442\u044b", None))
+        self.google_checkBox.setText(QCoreApplication.translate("Form", u"\u0413\u0443\u0433\u043b \u043f\u0430\u0442\u0435\u043d\u0442\u044b", None))
+        self.rospatent_checkBox.setText(QCoreApplication.translate("Form", u"\u0420\u043e\u0441\u043f\u0430\u0442\u0435\u043d\u0442", None))
+        self.fips_checkBox.setText(QCoreApplication.translate("Form", u"\u0424\u0438\u043f\u0441", None))
+        self.wipo_checkBox.setText(QCoreApplication.translate("Form", u"\u0412\u0438\u043f\u043e", None))
+        self.checkBox_7.setText(QCoreApplication.translate("Form", u"CheckBox", None))
         self.pushButton.setText(QCoreApplication.translate("Form", u"\u0421\u0431\u0440\u043e\u0441\u0438\u0442\u044c", None))
         self.pushButton_2.setText(QCoreApplication.translate("Form", u"\u041f\u0440\u0438\u043c\u0435\u043d\u0438\u0442\u044c", None))
     # retranslateUi

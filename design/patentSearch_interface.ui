@@ -21,9 +21,6 @@
 #parsingStart_button{
 	background-color:rgb(9,5,13);
 }
-#requestName_textEdit{
-	background-color:rgb(9,5,13);
-}
 #frame{
 	background-color:rgb(9,5,13);
 	border-radius: 10px;
@@ -104,7 +101,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../832c2ab8/icons.qrc">
+         <iconset>
           <normaloff>:/icons/search.svg</normaloff>:/icons/search.svg</iconset>
         </property>
         <property name="iconSize">
@@ -124,7 +121,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../832c2ab8/icons.qrc">
+         <iconset>
           <normaloff>:/icons/sliders.svg</normaloff>:/icons/sliders.svg</iconset>
         </property>
         <property name="iconSize">
@@ -205,7 +202,7 @@
          <string>Сохранить</string>
         </property>
         <property name="icon">
-         <iconset resource="../832c2ab8/icons.qrc">
+         <iconset>
           <normaloff>:/icons/save.svg</normaloff>:/icons/save.svg</iconset>
         </property>
        </widget>
@@ -252,19 +249,19 @@
          </size>
         </property>
         <property name="styleSheet">
-         <string notr="true">#frame_4{
-	background-color:rgb(9,5,13);
-}
-#frame_5{
-	background-color:rgb(9,5,13);
+         <string notr="true">QFrame{
+	background-color:rgb(20,20,27);
 }
 QPushButton{
 	border-radius:5px;
-	background-color:rgb(24,24,36);
+	background-color:rgb(9,5,13);
 }
 QComboBox{
 	border-radius:5px;
-	background-color:rgb(24,24,36);
+	background-color:rgb(9,5,13);
+}
+QCheckBox{
+	background-color:rgb(20,20,27);
 }</string>
         </property>
         <property name="frameShape">
@@ -313,10 +310,10 @@ QComboBox{
             <property name="bottomMargin">
              <number>0</number>
             </property>
-            <item alignment="Qt::AlignLeft">
+            <item>
              <widget class="QFrame" name="frame_4">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+               <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -324,7 +321,7 @@ QComboBox{
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>0</height>
+                <height>50</height>
                </size>
               </property>
               <property name="frameShape">
@@ -333,146 +330,265 @@ QComboBox{
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_4">
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
                <property name="spacing">
                 <number>0</number>
                </property>
                <property name="leftMargin">
-                <number>15</number>
+                <number>0</number>
                </property>
                <property name="topMargin">
-                <number>5</number>
+                <number>0</number>
                </property>
                <property name="rightMargin">
                 <number>0</number>
                </property>
                <property name="bottomMargin">
-                <number>5</number>
+                <number>0</number>
                </property>
                <item alignment="Qt::AlignLeft">
-                <widget class="QComboBox" name="comboBox">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
+                <widget class="QFrame" name="frame_9">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
                  </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
-                   <height>25</height>
-                  </size>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
                  </property>
-                 <item>
-                  <property name="text">
-                   <string>Роспатент</string>
+                 <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <item alignment="Qt::AlignLeft">
+                   <widget class="QCheckBox" name="checkBox_2">
+                    <property name="text">
+                     <string>Выбрать все источники</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignRight">
+                <widget class="QFrame" name="frame_10">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_9">
+                  <property name="spacing">
+                   <number>0</number>
                   </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Google Patents</string>
+                  <property name="leftMargin">
+                   <number>0</number>
                   </property>
-                 </item>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QComboBox" name="comboBox">
+                    <property name="minimumSize">
+                     <size>
+                      <width>150</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>Яндекс.Патенты</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Гугл патенты</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Роспатент</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Фипс</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Випо</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
               </layout>
              </widget>
             </item>
             <item>
-             <widget class="QStackedWidget" name="stackedWidget">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
+             <widget class="QFrame" name="frame_6">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
               </property>
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>0</height>
-               </size>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
               </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>16777215</height>
-               </size>
+              <property name="lineWidth">
+               <number>1</number>
               </property>
-              <property name="styleSheet">
-               <string notr="true">QWidget{
-	background-color:rgb(9,5,13);
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="frame_7">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_7">
+                  <item>
+                   <widget class="QCheckBox" name="yandex_checkBox">
+                    <property name="text">
+                     <string>Яндекс.Патенты</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="google_checkBox">
+                    <property name="text">
+                     <string>Гугл патенты</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="rospatent_checkBox">
+                    <property name="text">
+                     <string>Роспатент</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="fips_checkBox">
+                    <property name="text">
+                     <string>Фипс</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="wipo_checkBox">
+                    <property name="text">
+                     <string>Випо</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="checkBox_7">
+                    <property name="text">
+                     <string>CheckBox</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_8">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_6">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QStackedWidget" name="stackedWidget">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QWidget{
+	background-color:rgb(20,20,27);
 }</string>
-              </property>
-              <widget class="QWidget" name="googlePatent_widget">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <layout class="QVBoxLayout" name="verticalLayout_8">
-                <item>
-                 <widget class="QFrame" name="frame_6">
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_7">
-                   <item>
-                    <widget class="QPushButton" name="pushButton_3">
-                     <property name="text">
-                      <string>PushButton</string>
+                    </property>
+                    <widget class="QWidget" name="googlePatent_widget">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_8"/>
+                    </widget>
+                    <widget class="QWidget" name="rospatent_widget">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
                      </property>
                     </widget>
-                   </item>
-                   <item>
-                    <widget class="QPushButton" name="pushButton_4">
-                     <property name="text">
-                      <string>PushButton</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QFrame" name="frame_7">
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_6">
-                   <item>
-                    <widget class="QPushButton" name="pushButton_5">
-                     <property name="text">
-                      <string>PushButton</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QPushButton" name="pushButton_6">
-                     <property name="text">
-                      <string>PushButton</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-              <widget class="QWidget" name="rospatent_widget">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-              </widget>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
              </widget>
             </item>
             <item>
