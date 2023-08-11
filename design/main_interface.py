@@ -116,14 +116,14 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_5.addWidget(self.search_widget_button)
 
-        self.database_widget_button_2 = QPushButton(self.frame_6)
-        self.database_widget_button_2.setObjectName(u"database_widget_button_2")
-        self.database_widget_button_2.setMinimumSize(QSize(0, 32))
+        self.database_widget_button = QPushButton(self.frame_6)
+        self.database_widget_button.setObjectName(u"database_widget_button")
+        self.database_widget_button.setMinimumSize(QSize(0, 32))
         icon1 = QIcon()
         icon1.addFile(u":/icons/database.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.database_widget_button_2.setIcon(icon1)
+        self.database_widget_button.setIcon(icon1)
 
-        self.verticalLayout_5.addWidget(self.database_widget_button_2)
+        self.verticalLayout_5.addWidget(self.database_widget_button)
 
         self.settings_widget_button = QPushButton(self.frame_6)
         self.settings_widget_button.setObjectName(u"settings_widget_button")
@@ -244,7 +244,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -256,7 +256,7 @@ class Ui_MainWindow(object):
 "\u041f\u0410\u0422\u0415\u041d\u0422\u041e\u0412", None))
         self.label_3.setText("")
         self.search_widget_button.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u0438\u0441\u043a\u043e\u0432\u0438\u043a", None))
-        self.database_widget_button_2.setText(QCoreApplication.translate("MainWindow", u"\u0411\u0430\u0437\u0430 \u0434\u0430\u043d\u043d\u044b\u0445", None))
+        self.database_widget_button.setText(QCoreApplication.translate("MainWindow", u"\u0411\u0430\u0437\u0430 \u0434\u0430\u043d\u043d\u044b\u0445", None))
         self.settings_widget_button.setText(QCoreApplication.translate("MainWindow", u"\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", None))
         self.exit_button.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0445\u043e\u0434", None))
         self.menu_button.setText("")

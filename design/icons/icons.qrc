@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="icons">
+    <file>trash-2 (1).svg</file>
+    <file>plus.svg</file>
+    <file>log-out (1).svg</file>
     <file>x.svg</file>
     <file>wifi-off.svg</file>
     <file>square.svg</file>
@@ -9,8 +12,6 @@
     <file>save.svg</file>
     <file>minimize-2.svg</file>
     <file>maximize-2.svg</file>
-    <file>log-out (1).svg</file>
-    <file>icons.qrc</file>
     <file>file-text.svg</file>
     <file>database.svg</file>
     <file>chrome.svg</file>

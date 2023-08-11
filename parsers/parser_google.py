@@ -23,7 +23,7 @@ def parseGoogle(numberPatents, name, dateStatus='', startDate='', endDate='', au
             date = patent.find_elements(By.TAG_NAME, 'h4')[-1].text.split()[1].strip()
             description = patent.find_elements(By.TAG_NAME, 'raw-html')[-1].find_element(By.ID, 'htmlContent').text
 
-            result.append(Patent(title, link, date, description, 'Google'))
+            result.append(Patent(title, link, date, description, 'Гугл патенты'))
             if len(result) == numberPatents: break
         try:
             driver.find_element(By.XPATH, '/html/body/search-app/search-results/search-ui/div/div/div/div/div/div[1]/div[6]/'
@@ -34,7 +34,6 @@ def parseGoogle(numberPatents, name, dateStatus='', startDate='', endDate='', au
              break
         
     driver.quit()
-    print(len(result))
     return result
 
 

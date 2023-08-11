@@ -257,7 +257,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="database_widget_button_2">
+                 <widget class="QPushButton" name="database_widget_button">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -476,7 +476,7 @@
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="searchPatent_page"/>
             <widget class="QWidget" name="database_page"/>

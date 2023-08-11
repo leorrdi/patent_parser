@@ -30,7 +30,7 @@ def parseRospatent(numberPatents, name, patentNumber='', startDate='', endDate='
             title = patent.find_element(By.CLASS_NAME, 'report_caption ').text
             description = patent.find_element(By.CLASS_NAME, 'report_snippet').text
 
-            result.append(Patent(title, link, date, description, 'Rospatent'))
+            result.append(Patent(title, link, date, description, 'Роспатент'))
             if len(result) == numberPatents: break
         try:
             driver.find_element(By.XPATH, '/html/body/div/div/div[3]/div/div[4]/div[4]/div/div[3]/ul/li[9]').click()
