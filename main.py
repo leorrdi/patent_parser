@@ -1,9 +1,10 @@
 import sys
 from PySide2 import *
 from design.main_interface import *
-from parsers import *
+from parsers import * 
 from patentSearchWidget import *
 from databaseWidget import *
+from settingWidget import *
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -25,9 +26,11 @@ class MainWindow(QMainWindow):
         
         self.ui.stackedWidget.insertWidget(0, PatentSearchWidget())
         self.ui.stackedWidget.insertWidget(1, DatabaseWidget())
+        self.ui.stackedWidget.insertWidget(2, SettinsWidget())
         
         self.ui.search_widget_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(0))
         self.ui.database_widget_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(1))
+        self.ui.settings_widget_button.clicked.connect(lambda: self.ui.stackedWidget.setCurrentIndex(2))
         self.show()
     
 

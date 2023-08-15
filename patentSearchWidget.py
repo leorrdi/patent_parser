@@ -1,14 +1,14 @@
 from PySide2 import *
 from design.main_interface import *
 from design.patentSearch_interface import Ui_Form
+from yandexParameters import YandexParameters
 from design.patent_interface import Ui_patentItem
 from design.selectionTable_dialog import Ui_tableSeletion_dialog
 from parsers import *
 from sql_queries import *
-
+from parsers.Patent import Patent
 
 CustomerObjectRole = QtCore.Qt.UserRole + 1
-resultItemWidgets = []
 
 
 class SelectionTable(QDialog):
@@ -33,7 +33,6 @@ class SearchItemWidget(QWidget):
         self.ui = Ui_patentItem()
         self.ui.setupUi(self)
 
-        self.ui.checkBox.stateChanged.connect(self.stateChange)
 
         urlLink= f"<a href=\"{link}\">{name}</a>"
         self.ui.patentDate_label.setOpenExternalLinks(True)
@@ -43,11 +42,6 @@ class SearchItemWidget(QWidget):
         self.ui.patentSource_label.setText(source)
         self.ui.patentDescription_label.setText(description)
 
-
-    def stateChange(self):
-        if self.ui.checkBox.checkState():
-            self._item.data(CustomerObjectRole).itemSelected = True
-        else: self._item.data(CustomerObjectRole).itemSelected = False
 
 
 class PatentSearchWidget(QWidget):
@@ -60,12 +54,15 @@ class PatentSearchWidget(QWidget):
         self.ui.parsingStart_button.clicked.connect(self.startParsing)
         self.ui.savePatent_button.clicked.connect(self.savePatents)
 
+        self.ui.comboBox.currentTextChanged.connect(self.onCurrentIndexChanged)
+
+        self.ui.stackedWidget.insertWidget(0, YandexParameters())
+
         self.show()
 
 
     def startParsing(self):
         self.ui.listWidget.clear()
-        resultItemWidgets.clear()
 
         result = []
         resultGoogle = []
@@ -73,6 +70,7 @@ class PatentSearchWidget(QWidget):
         resultFips = []
         resultWipo = []
         resultYandex = []
+        resultKipris = []
 
         requestName = self.ui.requestName_textEdit.toPlainText()
 
@@ -85,12 +83,20 @@ class PatentSearchWidget(QWidget):
         if self.ui.wipo_checkBox.checkState():
             resultWipo = parseWipo(20, requestName)
         if self.ui.yandex_checkBox.checkState():
-            resultYandex = parseYandex(20, requestName)
+            widget = self.ui.stackedWidget.widget(0)
+            resultYandex = parseYandex(20, requestName, widget.ui.document_textEdit.toPlainText(), widget.ui.application_textEdit.toPlainText(),
+                                       widget.ui.namePatent_textEdit.toPlainText(), widget.ui.authot_textEdit.toPlainText(),
+                                       widget.ui.patentHolder_textEdit.toPlainText(), widget.ui.dateStart_textEdit.toPlainText(),
+                                       widget.ui.dateEnd_textEdit.toPlainText(), widget.ui.application_checkBox.checkState(),
+                                       widget.ui.patent_checkBox.checkState()
+                                       )
+        if self.ui.kipris_checkBox.checkState():
+            resultKipris = parseKipris(20, requestName)
         
         i=0
-        numberSources = 5
+        numberSources = 6
         while numberSources>0:
-            numberSources = 5
+            numberSources = 6
             if i<len(resultGoogle):
                 result.append(resultGoogle[i])
             else: numberSources-=1
@@ -110,29 +116,38 @@ class PatentSearchWidget(QWidget):
             if i<len(resultYandex):
                 result.append(resultYandex[i])
             else: numberSources-=1
+
+            if i<len(resultKipris):
+                result.append(resultKipris[i])
+            else: numberSources-=1
             
             i+=1
         
         for i in result:
-            item = QListWidgetItem(self.ui.listWidget)
-            item.setData(CustomerObjectRole, i)
-            item.setSizeHint(QSize(100,150))
+            patent = Patent(i.title, i.link, i.date, i.description, i.source )
 
-            resultItemWidgets.append(item)
+            item = QListWidgetItem(self.ui.listWidget)
+            item.setData(CustomerObjectRole, patent)
+            item.setSizeHint(QSize(100,150))
             
-            widget = SearchItemWidget(i.title, i.description, i.link, i.date, i.source, item, self.ui.listWidget)
+            widget = SearchItemWidget(patent.title, patent.description, patent.link, patent.date, patent.source, item, self.ui.listWidget)
             self.ui.listWidget.setItemWidget(item, widget)
 
     
     def savePatents(self):
         dig = SelectionTable()
         if dig.exec():
-            for item in resultItemWidgets:
-                if item.data(CustomerObjectRole).itemSelected:
-                    print(item.data(CustomerObjectRole).title)
-                    insertIntoTable(item.data(CustomerObjectRole).title, item.data(CustomerObjectRole).date, item.data(CustomerObjectRole).description,
-                                    item.data(CustomerObjectRole).link, item.data(CustomerObjectRole).source, dig.getNameTable())
-       
+            for patent in self.ui.listWidget.selectedItems():
+                patent = patent.data(CustomerObjectRole)
+                insertIntoTable(patent.title, patent.date, patent.description,
+                                patent.link, patent.source, dig.getNameTable())
+
+
+    def onCurrentIndexChanged(self):
+        source = self.ui.comboBox.currentText()
+        if source == 'Яндекс.Патенты':
+            self.ui.stackedWidget.setCurrentIndex(0)
+
 
     def slideToptMenu(self):
         height = self.ui.slide_menu_container.height()

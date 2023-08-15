@@ -21,7 +21,7 @@ class Ui_Form(object):
         self.verticalLayout_4 = QVBoxLayout(Form)
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.verticalLayout_4.setContentsMargins(0, 10, 0, 10)
+        self.verticalLayout_4.setContentsMargins(5, 5, 5, 5)
         self.frame = QFrame(Form)
         self.frame.setObjectName(u"frame")
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
@@ -37,25 +37,12 @@ class Ui_Form(object):
         self.horizontalLayout_2 = QHBoxLayout(self.frame)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 2, 10, 0)
-        self.frame_4 = QFrame(self.frame)
-        self.frame_4.setObjectName(u"frame_4")
-        self.frame_4.setMinimumSize(QSize(0, 0))
-        self.frame_4.setFrameShape(QFrame.StyledPanel)
-        self.frame_4.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_3 = QVBoxLayout(self.frame_4)
-        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.checkBox = QCheckBox(self.frame_4)
-        self.checkBox.setObjectName(u"checkBox")
-
-        self.verticalLayout_3.addWidget(self.checkBox)
-
-
-        self.horizontalLayout_2.addWidget(self.frame_4)
-
         self.frame_2 = QFrame(self.frame)
         self.frame_2.setObjectName(u"frame_2")
         sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
         self.frame_2.setSizePolicy(sizePolicy)
+        self.frame_2.setMinimumSize(QSize(0, 100))
+        self.frame_2.setSizeIncrement(QSize(0, 0))
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout = QVBoxLayout(self.frame_2)
@@ -69,13 +56,27 @@ class Ui_Form(object):
 
         self.verticalLayout.addWidget(self.patentName_label, 0, Qt.AlignTop)
 
-        self.patentDescription_label = QLabel(self.frame_2)
+        self.scrollArea = QScrollArea(self.frame_2)
+        self.scrollArea.setObjectName(u"scrollArea")
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_2 = QWidget()
+        self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 708, 71))
+        self.verticalLayout_3 = QVBoxLayout(self.scrollAreaWidgetContents_2)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.patentDescription_label = QLabel(self.scrollAreaWidgetContents_2)
         self.patentDescription_label.setObjectName(u"patentDescription_label")
         sizePolicy.setHeightForWidth(self.patentDescription_label.sizePolicy().hasHeightForWidth())
         self.patentDescription_label.setSizePolicy(sizePolicy)
         self.patentDescription_label.setWordWrap(True)
 
-        self.verticalLayout.addWidget(self.patentDescription_label, 0, Qt.AlignTop)
+        self.verticalLayout_3.addWidget(self.patentDescription_label, 0, Qt.AlignTop)
+
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents_2)
+
+        self.verticalLayout.addWidget(self.scrollArea)
 
 
         self.horizontalLayout_2.addWidget(self.frame_2, 0, Qt.AlignTop)
@@ -87,10 +88,11 @@ class Ui_Form(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
         self.frame_3.setSizePolicy(sizePolicy1)
+        self.frame_3.setMinimumSize(QSize(100, 0))
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.frame_3)
-        self.verticalLayout_2.setSpacing(12)
+        self.verticalLayout_2.setSpacing(15)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.patentSource_label = QLabel(self.frame_3)
@@ -124,7 +126,6 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.checkBox.setText("")
         self.patentName_label.setText(QCoreApplication.translate("Form", u"TextLabel", None))
         self.patentDescription_label.setText(QCoreApplication.translate("Form", u"TextLabel", None))
         self.patentSource_label.setText(QCoreApplication.translate("Form", u"TextLabel", None))

@@ -43,6 +43,7 @@ class Ui_Form(object):
 "}")
         self.verticalLayout = QVBoxLayout(Form)
         self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.frame = QFrame(Form)
         self.frame.setObjectName(u"frame")
         self.frame.setMinimumSize(QSize(0, 0))
@@ -199,8 +200,9 @@ class Ui_Form(object):
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
+        self.comboBox.addItem("")
         self.comboBox.setObjectName(u"comboBox")
-        self.comboBox.setMinimumSize(QSize(150, 25))
+        self.comboBox.setMinimumSize(QSize(150, 30))
 
         self.verticalLayout_9.addWidget(self.comboBox)
 
@@ -251,10 +253,10 @@ class Ui_Form(object):
 
         self.verticalLayout_7.addWidget(self.wipo_checkBox)
 
-        self.checkBox_7 = QCheckBox(self.frame_7)
-        self.checkBox_7.setObjectName(u"checkBox_7")
+        self.kipris_checkBox = QCheckBox(self.frame_7)
+        self.kipris_checkBox.setObjectName(u"kipris_checkBox")
 
-        self.verticalLayout_7.addWidget(self.checkBox_7)
+        self.verticalLayout_7.addWidget(self.kipris_checkBox)
 
 
         self.horizontalLayout_4.addWidget(self.frame_7)
@@ -286,11 +288,11 @@ class Ui_Form(object):
         self.verticalLayout_8 = QVBoxLayout(self.googlePatent_widget)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.stackedWidget.addWidget(self.googlePatent_widget)
-        self.rospatent_widget = QWidget()
-        self.rospatent_widget.setObjectName(u"rospatent_widget")
-        sizePolicy1.setHeightForWidth(self.rospatent_widget.sizePolicy().hasHeightForWidth())
-        self.rospatent_widget.setSizePolicy(sizePolicy1)
-        self.stackedWidget.addWidget(self.rospatent_widget)
+        self.yandex_widget = QWidget()
+        self.yandex_widget.setObjectName(u"yandex_widget")
+        sizePolicy1.setHeightForWidth(self.yandex_widget.sizePolicy().hasHeightForWidth())
+        self.yandex_widget.setSizePolicy(sizePolicy1)
+        self.stackedWidget.addWidget(self.yandex_widget)
 
         self.verticalLayout_6.addWidget(self.stackedWidget)
 
@@ -329,6 +331,7 @@ class Ui_Form(object):
         self.pushButton_2.setObjectName(u"pushButton_2")
         sizePolicy3.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
         self.pushButton_2.setSizePolicy(sizePolicy3)
+        self.pushButton_2.setMinimumSize(QSize(0, 30))
 
         self.horizontalLayout_3.addWidget(self.pushButton_2)
 
@@ -351,6 +354,9 @@ class Ui_Form(object):
         font1.setPointSize(9)
         self.listWidget.setFont(font1)
         self.listWidget.setLayoutDirection(Qt.LeftToRight)
+        self.listWidget.setAutoScrollMargin(16)
+        self.listWidget.setSelectionMode(QAbstractItemView.MultiSelection)
+        self.listWidget.setSpacing(10)
 
         self.verticalLayout_2.addWidget(self.listWidget)
 
@@ -375,13 +381,14 @@ class Ui_Form(object):
         self.comboBox.setItemText(2, QCoreApplication.translate("Form", u"\u0420\u043e\u0441\u043f\u0430\u0442\u0435\u043d\u0442", None))
         self.comboBox.setItemText(3, QCoreApplication.translate("Form", u"\u0424\u0438\u043f\u0441", None))
         self.comboBox.setItemText(4, QCoreApplication.translate("Form", u"\u0412\u0438\u043f\u043e", None))
+        self.comboBox.setItemText(5, QCoreApplication.translate("Form", u"\u041a\u0438\u043f\u0440\u0438\u0441", None))
 
         self.yandex_checkBox.setText(QCoreApplication.translate("Form", u"\u042f\u043d\u0434\u0435\u043a\u0441.\u041f\u0430\u0442\u0435\u043d\u0442\u044b", None))
         self.google_checkBox.setText(QCoreApplication.translate("Form", u"\u0413\u0443\u0433\u043b \u043f\u0430\u0442\u0435\u043d\u0442\u044b", None))
         self.rospatent_checkBox.setText(QCoreApplication.translate("Form", u"\u0420\u043e\u0441\u043f\u0430\u0442\u0435\u043d\u0442", None))
         self.fips_checkBox.setText(QCoreApplication.translate("Form", u"\u0424\u0438\u043f\u0441", None))
         self.wipo_checkBox.setText(QCoreApplication.translate("Form", u"\u0412\u0438\u043f\u043e", None))
-        self.checkBox_7.setText(QCoreApplication.translate("Form", u"CheckBox", None))
+        self.kipris_checkBox.setText(QCoreApplication.translate("Form", u"\u041a\u0438\u043f\u0440\u0438\u0441", None))
         self.pushButton.setText(QCoreApplication.translate("Form", u"\u0421\u0431\u0440\u043e\u0441\u0438\u0442\u044c", None))
         self.pushButton_2.setText(QCoreApplication.translate("Form", u"\u041f\u0440\u0438\u043c\u0435\u043d\u0438\u0442\u044c", None))
     # retranslateUi

@@ -293,7 +293,7 @@ QComboBox{
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="../1f697ead/icons.qrc">
+               <iconset>
                 <normaloff>:/icons/plus.svg</normaloff>:/icons/plus.svg</iconset>
               </property>
               <property name="iconSize">
@@ -316,7 +316,7 @@ QComboBox{
                <string/>
               </property>
               <property name="icon">
-               <iconset resource="../1f697ead/icons.qrc">
+               <iconset>
                 <normaloff>:/icons/trash-2 (1).svg</normaloff>:/icons/trash-2 (1).svg</iconset>
               </property>
               <property name="iconSize">
@@ -358,7 +358,14 @@ QComboBox{
           <number>0</number>
          </property>
          <item>
-          <widget class="QListWidget" name="listWidget"/>
+          <widget class="QListWidget" name="listWidget">
+           <property name="selectionMode">
+            <enum>QAbstractItemView::MultiSelection</enum>
+           </property>
+           <property name="spacing">
+            <number>10</number>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>

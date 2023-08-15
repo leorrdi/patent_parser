@@ -225,6 +225,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.stackedWidget = QStackedWidget(self.main_body_contents)
         self.stackedWidget.setObjectName(u"stackedWidget")
+        self.setting_page = QWidget()
+        self.setting_page.setObjectName(u"setting_page")
+        self.stackedWidget.addWidget(self.setting_page)
         self.searchPatent_page = QWidget()
         self.searchPatent_page.setObjectName(u"searchPatent_page")
         self.stackedWidget.addWidget(self.searchPatent_page)
@@ -244,7 +247,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)

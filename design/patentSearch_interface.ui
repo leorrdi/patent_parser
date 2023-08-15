@@ -434,6 +434,11 @@ QCheckBox{
                       <string>Випо</string>
                      </property>
                     </item>
+                    <item>
+                     <property name="text">
+                      <string>Киприс</string>
+                     </property>
+                    </item>
                    </widget>
                   </item>
                  </layout>
@@ -473,7 +478,7 @@ QCheckBox{
                 <widget class="QFrame" name="frame_7">
                  <property name="minimumSize">
                   <size>
-                   <width>150</width>
+                   <width>0</width>
                    <height>0</height>
                   </size>
                  </property>
@@ -520,9 +525,9 @@ QCheckBox{
                    </widget>
                   </item>
                   <item>
-                   <widget class="QCheckBox" name="checkBox_7">
+                   <widget class="QCheckBox" name="kipris_checkBox">
                     <property name="text">
-                     <string>CheckBox</string>
+                     <string>Киприс</string>
                     </property>
                    </widget>
                   </item>
@@ -587,7 +592,7 @@ QCheckBox{
                      </property>
                      <layout class="QVBoxLayout" name="verticalLayout_8"/>
                     </widget>
-                    <widget class="QWidget" name="rospatent_widget">
+                    <widget class="QWidget" name="yandex_widget">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                        <horstretch>0</horstretch>
@@ -716,6 +721,15 @@ QCheckBox{
         </property>
         <property name="layoutDirection">
          <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoScrollMargin">
+         <number>16</number>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::MultiSelection</enum>
+        </property>
+        <property name="spacing">
+         <number>10</number>
         </property>
        </widget>
       </item>

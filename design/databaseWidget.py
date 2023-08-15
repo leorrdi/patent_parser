@@ -178,6 +178,8 @@ class Ui_databaseWidget(object):
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.listWidget = QListWidget(self.frame_2)
         self.listWidget.setObjectName(u"listWidget")
+        self.listWidget.setSelectionMode(QAbstractItemView.MultiSelection)
+        self.listWidget.setSpacing(10)
 
         self.verticalLayout_3.addWidget(self.listWidget)
 

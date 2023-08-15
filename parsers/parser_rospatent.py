@@ -39,7 +39,6 @@ def parseRospatent(numberPatents, name, patentNumber='', startDate='', endDate='
             break
         
     driver.quit()
-    print(len(result))
     return result
 
 

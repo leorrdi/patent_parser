@@ -4,7 +4,9 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 from parsers.Patent import Patent
 
-def parseFips(numberPatents, name, nameParameter='', documentNumber='', datePublication='', mpk='', applicant='', author='' , patentHolders='', datePublicationApp=''):
+def parseFips(numberPatents, name, nameParameter='', documentNumber='', datePublication='',
+               mpk='', applicant='', author='' , patentHolders='', datePublicationApp=''
+               ):
   try:
     driver = webdriver.Chrome()
     driver.get('https://www1.fips.ru/iiss/')
